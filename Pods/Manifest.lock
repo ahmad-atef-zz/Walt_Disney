@@ -4,13 +4,16 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 714871e6c80d54480cc355a1c122a10aca078783
+PODFILE CHECKSUM: 6d1e31cb502c44fd9809af07a4e347b8dce5661d
 
 COCOAPODS: 1.2.0
