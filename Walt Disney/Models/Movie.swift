@@ -9,23 +9,23 @@
 import Foundation
 import SwiftyJSON
 
-enum Genres : Int{
-    case Carton,Drama, Romance
+enum Genre : String{
+    case Carton = "catroon",Drama = "drama", Romance = "romance", Action = "action"
 }
 
 struct Movie {
     let name : String
     let imageCover : String
-    let genres : Genres
+    let genres : Genre
     let rating : Double
     let story : String
     let releaseDate : String
 
 
-    init(name : String, imageCover : String, genres : Genres, rating : Double, story : String, releaseDate : String) {
+    init(name : String, imageCover : String, genre : Genre, rating : Double, story : String, releaseDate : String) {
         self.name = name
         self.imageCover = imageCover
-        self.genres = genres
+        self.genres = genre
         self.rating = rating
         self.story = story
         self.releaseDate = releaseDate
@@ -37,7 +37,7 @@ struct Movie {
         }
         name = json["name"].stringValue
         imageCover = json["imageCover"].stringValue
-        genres = Genres(rawValue: json["rating"].intValue)!
+        genres = Genre(rawValue: json["genre"].stringValue)!
         rating = json["rating"].doubleValue
         story = json["stroy"].stringValue
         releaseDate = json["releaseDate"].stringValue

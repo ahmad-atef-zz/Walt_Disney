@@ -107,6 +107,7 @@
 		5C8478871FAA15D8009EEE41 /* Walt DisneyTests */ = {
 			isa = PBXGroup;
 			children = (
+				5C8478A51FAA7EB8009EEE41 /* Mocks */,
 				5C8478881FAA15D8009EEE41 /* Walt_DisneyTests.swift */,
 				5C84788A1FAA15D8009EEE41 /* Info.plist */,
 			);
@@ -152,6 +153,13 @@
 				5C8478A31FAA4F63009EEE41 /* Movie.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5C8478A51FAA7EB8009EEE41 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		AC15E6A6E50100561E62593D /* Pods */ = {
