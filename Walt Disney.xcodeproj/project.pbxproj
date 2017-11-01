@@ -14,6 +14,8 @@
 		5C84787E1FAA15D8009EEE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C84787C1FAA15D8009EEE41 /* LaunchScreen.storyboard */; };
 		5C8478891FAA15D8009EEE41 /* Walt_DisneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8478881FAA15D8009EEE41 /* Walt_DisneyTests.swift */; };
 		5C84789D1FAA165A009EEE41 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C84789B1FAA165A009EEE41 /* MoviesListViewController.swift */; };
+		5C84789F1FAA4829009EEE41 /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C84789E1FAA4829009EEE41 /* MoviesListViewModel.swift */; };
+		5C8478A41FAA4F63009EEE41 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8478A31FAA4F63009EEE41 /* Movie.swift */; };
 		E53E08D4CDFA3A5E7BE17D4D /* Pods_Walt_DisneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EEF2CFFAD4014B3CF72CC02 /* Pods_Walt_DisneyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		5C8478881FAA15D8009EEE41 /* Walt_DisneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walt_DisneyTests.swift; sourceTree = "<group>"; };
 		5C84788A1FAA15D8009EEE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C84789B1FAA165A009EEE41 /* MoviesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
+		5C84789E1FAA4829009EEE41 /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
+		5C8478A31FAA4F63009EEE41 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		686DDBFCC7BF5978A9D69CE0 /* Pods_Walt_Disney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walt_Disney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EEF2CFFAD4014B3CF72CC02 /* Pods_Walt_DisneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walt_DisneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9C99BB582B3BD91CC5AC00 /* Pods-Walt DisneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walt DisneyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Walt DisneyTests/Pods-Walt DisneyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,10 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				5C8478731FAA15D8009EEE41 /* AppDelegate.swift */,
+				5C84787F1FAA15D8009EEE41 /* Info.plist */,
+				5C8478A11FAA4A1C009EEE41 /* Extensions */,
+				5C8478A21FAA4A1C009EEE41 /* Models */,
 				5C84789A1FAA165A009EEE41 /* Controllers */,
 				5C84789C1FAA165A009EEE41 /* View Models */,
 				5C8478991FAA165A009EEE41 /* Views */,
-				5C84787F1FAA15D8009EEE41 /* Info.plist */,
 			);
 			path = "Walt Disney";
 			sourceTree = "<group>";
@@ -128,8 +134,24 @@
 		5C84789C1FAA165A009EEE41 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				5C84789E1FAA4829009EEE41 /* MoviesListViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		5C8478A11FAA4A1C009EEE41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5C8478A21FAA4A1C009EEE41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C8478A31FAA4F63009EEE41 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AC15E6A6E50100561E62593D /* Pods */ = {
@@ -354,7 +376,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C84789F1FAA4829009EEE41 /* MoviesListViewModel.swift in Sources */,
 				5C84789D1FAA165A009EEE41 /* MoviesListViewController.swift in Sources */,
+				5C8478A41FAA4F63009EEE41 /* Movie.swift in Sources */,
 				5C8478741FAA15D8009EEE41 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
