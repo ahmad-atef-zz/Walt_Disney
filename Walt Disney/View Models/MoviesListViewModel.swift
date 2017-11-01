@@ -20,9 +20,9 @@ class MoviesListDataModel : MoviesList{
         return "Hello \(name)"
     }
 
-    private var movies : [Movie] = [Movie(name: "X", imageCover: "", genres: [.Carton,.Drama], rating: 4.5, story: "asdasd", releaseDate: "123123"),
-                                    Movie(name: "Y", imageCover: "", genres: [.Carton,.Drama], rating: 4.5, story: "asdasd", releaseDate: "123123"),
-                                    Movie(name: "Z", imageCover: "", genres: [.Carton,.Drama], rating: 4.5, story: "asdasd", releaseDate: "123123")]
+    private var movies : [Movie] = [Movie(name: "X", imageCover: "", genres: .Carton, rating: 4.5, story: "asdasd", releaseDate: "123123"),
+                                    Movie(name: "Y", imageCover: "", genres: .Carton, rating: 4.5, story: "asdasd", releaseDate: "123123"),
+                                    Movie(name: "Z", imageCover: "", genres: .Carton, rating: 4.5, story: "asdasd", releaseDate: "123123")]
 
     func listMovies (onSuccess: ([Movie]) -> (), onFail: (String) -> ()){
         onSuccess(movies)
