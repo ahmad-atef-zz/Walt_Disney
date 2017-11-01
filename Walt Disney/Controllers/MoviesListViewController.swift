@@ -10,10 +10,23 @@ import UIKit
 
 class MoviesListViewController: UIViewController {
 
+
+    //MARK: - Proprties -
+    let dataModel : MoviesList = MoviesListDataModel()
+
+    //MARK: - View Life Cycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        listMovies()
     }
 
-
+    //MARK: - Functions -
+    func listMovies() {
+        dataModel.listMovies(onSuccess: { (movies) in
+            print(movies.count)
+        }) { (error) in
+            print(error)
+        }
+    }
 }
 
