@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3A8E76195041FEC63B7309A8 /* Pods_Walt_Disney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686DDBFCC7BF5978A9D69CE0 /* Pods_Walt_Disney.framework */; };
+		5C452EAB1FAF0FC6005F4240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C452EAA1FAF0FC6005F4240 /* Main.storyboard */; };
+		5C452EAD1FAF108B005F4240 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C452EAC1FAF108B005F4240 /* Launch Screen.storyboard */; };
+		5C452EAF1FAF13F6005F4240 /* MovieCellTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C452EAE1FAF13F6005F4240 /* MovieCellTestCase.swift */; };
 		5C8478741FAA15D8009EEE41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8478731FAA15D8009EEE41 /* AppDelegate.swift */; };
-		5C8478791FAA15D8009EEE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8478771FAA15D8009EEE41 /* Main.storyboard */; };
 		5C84787B1FAA15D8009EEE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C84787A1FAA15D8009EEE41 /* Assets.xcassets */; };
-		5C84787E1FAA15D8009EEE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C84787C1FAA15D8009EEE41 /* LaunchScreen.storyboard */; };
 		5C8478891FAA15D8009EEE41 /* Walt_DisneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8478881FAA15D8009EEE41 /* Walt_DisneyTests.swift */; };
 		5C84789D1FAA165A009EEE41 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C84789B1FAA165A009EEE41 /* MoviesListViewController.swift */; };
 		5C84789F1FAA4829009EEE41 /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C84789E1FAA4829009EEE41 /* MoviesListViewModel.swift */; };
@@ -32,11 +33,12 @@
 /* Begin PBXFileReference section */
 		032A78EB3F0D8431777D87C1 /* Pods-Walt Disney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walt Disney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Walt Disney/Pods-Walt Disney.release.xcconfig"; sourceTree = "<group>"; };
 		52A0877795E5A1BEFA748E47 /* Pods-Walt Disney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walt Disney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Walt Disney/Pods-Walt Disney.debug.xcconfig"; sourceTree = "<group>"; };
+		5C452EAA1FAF0FC6005F4240 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5C452EAC1FAF108B005F4240 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5C452EAE1FAF13F6005F4240 /* MovieCellTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCellTestCase.swift; sourceTree = "<group>"; };
 		5C8478701FAA15D8009EEE41 /* Walt Disney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walt Disney.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8478731FAA15D8009EEE41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C8478781FAA15D8009EEE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C84787A1FAA15D8009EEE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5C84787D1FAA15D8009EEE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C84787F1FAA15D8009EEE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8478841FAA15D8009EEE41 /* Walt DisneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Walt DisneyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8478881FAA15D8009EEE41 /* Walt_DisneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walt_DisneyTests.swift; sourceTree = "<group>"; };
@@ -70,6 +72,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C452EB01FAF1710005F4240 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		5C8478671FAA15D8009EEE41 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +104,7 @@
 			children = (
 				5C8478731FAA15D8009EEE41 /* AppDelegate.swift */,
 				5C84787F1FAA15D8009EEE41 /* Info.plist */,
+				5C452EB01FAF1710005F4240 /* UI */,
 				5C8478A11FAA4A1C009EEE41 /* Extensions */,
 				5C8478A21FAA4A1C009EEE41 /* Models */,
 				5C84789A1FAA165A009EEE41 /* Controllers */,
@@ -108,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				5C8478A51FAA7EB8009EEE41 /* Mocks */,
+				5C452EAE1FAF13F6005F4240 /* MovieCellTestCase.swift */,
 				5C8478881FAA15D8009EEE41 /* Walt_DisneyTests.swift */,
 				5C84788A1FAA15D8009EEE41 /* Info.plist */,
 			);
@@ -117,9 +128,9 @@
 		5C8478991FAA165A009EEE41 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5C8478771FAA15D8009EEE41 /* Main.storyboard */,
+				5C452EAA1FAF0FC6005F4240 /* Main.storyboard */,
 				5C84787A1FAA15D8009EEE41 /* Assets.xcassets */,
-				5C84787C1FAA15D8009EEE41 /* LaunchScreen.storyboard */,
+				5C452EAC1FAF108B005F4240 /* Launch Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,9 +282,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C84787E1FAA15D8009EEE41 /* LaunchScreen.storyboard in Resources */,
+				5C452EAD1FAF108B005F4240 /* Launch Screen.storyboard in Resources */,
 				5C84787B1FAA15D8009EEE41 /* Assets.xcassets in Resources */,
-				5C8478791FAA15D8009EEE41 /* Main.storyboard in Resources */,
+				5C452EAB1FAF0FC6005F4240 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C452EAF1FAF13F6005F4240 /* MovieCellTestCase.swift in Sources */,
 				5C8478891FAA15D8009EEE41 /* Walt_DisneyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,25 +420,6 @@
 			targetProxy = 5C8478851FAA15D8009EEE41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5C8478771FAA15D8009EEE41 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C8478781FAA15D8009EEE41 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5C84787C1FAA15D8009EEE41 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C84787D1FAA15D8009EEE41 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5C84788B1FAA15D8009EEE41 /* Debug */ = {
@@ -544,10 +537,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LG4XB4J5E3;
 				INFOPLIST_FILE = "Walt Disney/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahmad.Walt-Disney";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -560,10 +554,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LG4XB4J5E3;
 				INFOPLIST_FILE = "Walt Disney/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Ahmad.Walt-Disney";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
