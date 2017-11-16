@@ -16,12 +16,13 @@ enum Genre : String{
 struct Movie {
     let name : String
     let imageCover : String
-    let genres : Genre
     let rating : Double
+    let genres : Genre
     let story : String
     let releaseDate : String
 
 
+    // Designated Intalizer.
     init(name : String, imageCover : String, genre : Genre, rating : Double, story : String, releaseDate : String) {
         self.name = name
         self.imageCover = imageCover

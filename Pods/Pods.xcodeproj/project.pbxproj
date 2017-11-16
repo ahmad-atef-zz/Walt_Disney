@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -67,15 +67,15 @@
 		22B96ED9AF25E2B8511C2C84481902EC /* Pods-Walt Disney-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Walt Disney-acknowledgements.markdown"; sourceTree = "<group>"; };
 		283572A0935C0D96A889148D0BECEA4E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		2E48DD0FCC8364B19B85A05E81FE27BC /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		31B0EA2BD23F02E1A408B156C7EEB486 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31B0EA2BD23F02E1A408B156C7EEB486 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		334FEE430ED6688FDB99E27171C9C29E /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		34D9C46D826524B68FA92E5CCC8B2716 /* Pods-Walt DisneyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Walt DisneyTests-dummy.m"; sourceTree = "<group>"; };
 		3523356D8E650A6A372ACA71D5B0B281 /* Pods-Walt DisneyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt DisneyTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A8F339250A1C3C5C5C5364254007103 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		401D3640857D9EFF230B5EAEC0D2E257 /* Pods_Walt_Disney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Walt_Disney.framework; path = "Pods-Walt Disney.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		401D3640857D9EFF230B5EAEC0D2E257 /* Pods_Walt_Disney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walt_Disney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D46A1B80EDBA1372DCF4C5BEAA423D7 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		4FBC7EF61798542944C48EC5713E2B71 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		528120CB71233247B798C2063FE765A1 /* Pods-Walt DisneyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Walt DisneyTests.modulemap"; sourceTree = "<group>"; };
+		4FBC7EF61798542944C48EC5713E2B71 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		528120CB71233247B798C2063FE765A1 /* Pods-Walt DisneyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Walt DisneyTests.modulemap"; sourceTree = "<group>"; };
 		55B8AFA4484C6BB9DCF72D0F544EE0B0 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		580F2568C10EF19E273D5CA9991337C9 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		64CD333AE3109AB7F617155E6234573C /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
@@ -84,15 +84,15 @@
 		752AB6EB560B2225769853BB2F55154A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78DAB1B4570C2E5E064756322DFA4DBE /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		796A8EDC58862AC9CB944C3F516FA2C8 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
-		7A597F360B5CF3A36CC667450A0A26FD /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		7A597F360B5CF3A36CC667450A0A26FD /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		83362FC661C15F089D2D3F4131603335 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		839AD6CECC27D7583D0BFD625906CFE0 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		88FF7A605156F7BAB0C0BEE27B1FE945 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		895AAC15D5E949F723A6FFCEAF640F67 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		8D61D04361806C7A0654F5FC16D10C70 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		8F2C2D62575DFBEA519EAE85731B0405 /* Pods-Walt Disney.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Walt Disney.modulemap"; sourceTree = "<group>"; };
+		8F2C2D62575DFBEA519EAE85731B0405 /* Pods-Walt Disney.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Walt Disney.modulemap"; sourceTree = "<group>"; };
 		9201E18B7B0DF1FC52A73086FE7CE0B4 /* Pods-Walt Disney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt Disney.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95CF70D3A76A9514EC2CD62F027F1D9B /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		9661C607C753E093937D514B7F8586BA /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		99B3F806DF55E29D058306DCFC0D061F /* Pods-Walt Disney-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt Disney-resources.sh"; sourceTree = "<group>"; };
@@ -101,12 +101,12 @@
 		A4FCD8623023CA4D58824FF953167F79 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		AA323C90663942983643D7A4D1F697C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B60425BAA790E07BFF267769EB77B56D /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		BF2DE4BF2FB08E657D5F09F34B8F7FDB /* Pods_Walt_DisneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Walt_DisneyTests.framework; path = "Pods-Walt DisneyTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF2DE4BF2FB08E657D5F09F34B8F7FDB /* Pods_Walt_DisneyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walt_DisneyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E88A450A84E3957158B3B3459740AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CB1B3588F7C80E53FA78AB8BE3E221A3 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		CD768251FF85F819F07D640A32BF2B61 /* Pods-Walt DisneyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Walt DisneyTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D103B32E76759492379BE09A6407B07D /* Pods-Walt DisneyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt DisneyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D5A234D8B0F196208A20AF72EBC874C3 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		D5A234D8B0F196208A20AF72EBC874C3 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		DA84AD617D97E48213EF3C38FCC56161 /* Pods-Walt Disney-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Walt Disney-umbrella.h"; sourceTree = "<group>"; };
 		DAF0F6C74BFDC89928F34E0F1D8F8861 /* Pods-Walt Disney-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt Disney-frameworks.sh"; sourceTree = "<group>"; };
 		DEAAD6D80A910DAB44D859EB8A4AB5C4 /* Pods-Walt DisneyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Walt DisneyTests-umbrella.h"; sourceTree = "<group>"; };
@@ -182,7 +182,6 @@
 				889424CDDA6842908313DA5A4AA38282 /* Support Files */,
 				8CBA3B025027E257EF3ECD37EB45BA92 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -219,7 +218,6 @@
 				2E48DD0FCC8364B19B85A05E81FE27BC /* SwiftyJSON.swift */,
 				90C6DB88125760DA9C0611302B6AEA04 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -646,7 +644,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -750,7 +748,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
