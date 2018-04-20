@@ -10,51 +10,90 @@ import Foundation
 import SwiftyJSON
 
 enum Genre : String{
-    case Carton = "catroon",Drama = "drama", Romance = "romance", Action = "action"
+    case Carton = "catroon"
+    case Drama = "drama"
+    case Romance = "romance"
+    case Action = "action"
+    case Unknown = ""
+    case Kids = "kids"
+    case Family = "family"
 }
 
-struct Movie {
-    let name : String
-    let imageCover : String
-    let rating : Double
-    let genres : Genre
-    let story : String
-    let releaseDate : String
-
-
-    // Designated Intalizer.
-    init(name : String, imageCover : String, genre : Genre, rating : Double, story : String, releaseDate : String) {
-        self.name = name
-        self.imageCover = imageCover
-        self.genres = genre
-        self.rating = rating
-        self.story = story
-        self.releaseDate = releaseDate
+struct Movie: Codable {
+    let title: String
+    let imageCover: String
+    let rating: Rating
+    let story: String
+    let releaseDate: String
+    let genres: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case title = "title"
+        case imageCover = "imageCover"
+        case rating = "rating"
+        case story = "story"
+        case releaseDate = "releaseDate"
+        case genres = "genres"
     }
+}
 
-    init?(withJSON json : JSON?){
-        guard let json = json else {
-            return nil
+// MARK: Convenience initializers
+
+extension Movie {
+    init(data: Data) throws {
+        self = try JSONDecoder().decode(Movie.self, from: data)
+    }
+    
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
         }
-        name = json["name"].stringValue
-        imageCover = json["imageCover"].stringValue
-        genres = Genre(rawValue: json["genre"].stringValue)!
-        rating = json["rating"].doubleValue
-        story = json["stroy"].stringValue
-        releaseDate = json["releaseDate"].stringValue
+        try self.init(data: data)
+    }
+    
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+    
+    func jsonData() throws -> Data {
+        return try JSONEncoder().encode(self)
+    }
+    
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
     }
 }
 
 
-//guard let fuelTypeArrayJson = json["rawAllFuelTypes"].array else {
-//    self.fuelTypes = nil
-//    return
-//}
-//var fuelTypes: [Int] = []
-//for fuelType in fuelTypeArrayJson {
-//    if let fuel = fuelType.int {
-//        fuelTypes.append(fuel)
-//    }
-//}
-//self.fuelTypes = fuelTypes
+
+
+
+struct Movies: Codable {
+    let movies: [Movie]
+}
+
+extension Movies {
+    init(data: Data) throws {
+        self = try JSONDecoder().decode(Movies.self, from: data)
+    }
+    
+    init(_ json: String, using encoding: String.Encoding = .utf8) throws {
+        guard let data = json.data(using: encoding) else {
+            throw NSError(domain: "JSONDecoding", code: 0, userInfo: nil)
+        }
+        try self.init(data: data)
+    }
+    
+    init(fromURL url: URL) throws {
+        try self.init(data: try Data(contentsOf: url))
+    }
+    
+    func jsonData() throws -> Data {
+        return try JSONEncoder().encode(self)
+    }
+    
+    func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
+        return String(data: try self.jsonData(), encoding: encoding)
+    }
+}
 
