@@ -7,10 +7,12 @@ target 'Walt Disney' do
   # Pods for Walt Disney
   pod 'SwiftyJSON'
   pod 'SwiftLint'
+
   target 'Walt DisneyTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'FBSnapshotTestCase'
+    pod 'SwiftLint'
   end
 
 end
