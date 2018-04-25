@@ -25,7 +25,7 @@ class MovieCell: UIView {
     }
 
 
-    func configure(for movie: Movie) {
+    func configure(movie: Movie) {
 
     }
 
