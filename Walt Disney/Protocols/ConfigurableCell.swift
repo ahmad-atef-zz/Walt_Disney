@@ -9,6 +9,7 @@
 import Foundation
 
 
+/// Generic protocol for Cell
 protocol GenericCell {
     associatedtype DataCell
     func configure(withData data: DataCell)
