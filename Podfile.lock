@@ -14,21 +14,19 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.2.5):
     - PromiseKit/CorePromise
-  - SwifterSwift (4.3.0):
-    - SwifterSwift/AppKit (= 4.3.0)
-    - SwifterSwift/CoreGraphics (= 4.3.0)
-    - SwifterSwift/CoreLocation (= 4.3.0)
-    - SwifterSwift/Foundation (= 4.3.0)
-    - SwifterSwift/MapKit (= 4.3.0)
-    - SwifterSwift/SwiftStdlib (= 4.3.0)
-    - SwifterSwift/UIKit (= 4.3.0)
-  - SwifterSwift/AppKit (4.3.0)
-  - SwifterSwift/CoreGraphics (4.3.0)
-  - SwifterSwift/CoreLocation (4.3.0)
-  - SwifterSwift/Foundation (4.3.0)
-  - SwifterSwift/MapKit (4.3.0)
-  - SwifterSwift/SwiftStdlib (4.3.0)
-  - SwifterSwift/UIKit (4.3.0)
+  - SwifterSwift (3.2.0):
+    - SwifterSwift/AppKit (= 3.2.0)
+    - SwifterSwift/CoreGraphics (= 3.2.0)
+    - SwifterSwift/CoreLocation (= 3.2.0)
+    - SwifterSwift/Foundation (= 3.2.0)
+    - SwifterSwift/SwiftStdlib (= 3.2.0)
+    - SwifterSwift/UIKit (= 3.2.0)
+  - SwifterSwift/AppKit (3.2.0)
+  - SwifterSwift/CoreGraphics (3.2.0)
+  - SwifterSwift/CoreLocation (3.2.0)
+  - SwifterSwift/Foundation (3.2.0)
+  - SwifterSwift/SwiftStdlib (3.2.0)
+  - SwifterSwift/UIKit (3.2.0)
   - SwiftLint (0.25.1)
   - SwiftyJSON (3.1.4)
 
@@ -36,7 +34,7 @@ DEPENDENCIES:
   - Alamofire
   - FBSnapshotTestCase
   - PromiseKit
-  - SwifterSwift
+  - SwifterSwift (~> 3.2.0)
   - SwiftLint
   - SwiftyJSON
 
@@ -44,10 +42,10 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
   PromiseKit: a26828b0a8d5874960dfdb575b57a70790ec36f1
-  SwifterSwift: f3fce2b9fc5b9d8fda6eec33825e5243c60aebba
+  SwifterSwift: e009210d995737f54c1fbffc5a3f004c8467ab1d
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 5a56a5661245432547a244e7893dd96bc78a56e0
+PODFILE CHECKSUM: 3cc1b070fd05a46996be02bcce0ea2715bbe2d5c
 
 COCOAPODS: 1.2.0
