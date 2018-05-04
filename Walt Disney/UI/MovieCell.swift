@@ -11,8 +11,9 @@ import Foundation
 
 class MovieCell: UIView {
 
-    private let movieNameLabel = UILabel()
-    private let movieImageView = UIImageView()
+    private let movieTitle = UILabel()
+    private let movieCoverImage = UIImageView()
+    //private let rating : UIRating = UIRating()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,22 +27,36 @@ class MovieCell: UIView {
 
 
     func configure(movie: Movie) {
-
+        movieTitle.text = movie.title
+        if let movieImageURL = URL(string: movie.imageCover){
+            movieCoverImage.download(from: movieImageURL,
+                                     placeholder: moviceCellPlaceholderImage) { (image) in
+                                        
+            }
+        }
     }
 
     private func setupSubViews() {
-        movieNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        movieNameLabel.text = "TESTING DATA"
-        movieNameLabel.textColor = .yellow
-        movieNameLabel.backgroundColor = .green
-        movieNameLabel.textAlignment = .center
-        addSubview(movieNameLabel)
+        addSubview(movieTitle)
+        addSubview(movieCoverImage)
     }
 
     private func addConstraints(){
-        movieNameLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        movieNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        movieNameLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.6).isActive = true
-        movieNameLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.75).isActive = true
+        movieTitle.translatesAutoresizingMaskIntoConstraints = false
+        movieCoverImage.translatesAutoresizingMaskIntoConstraints = false
+
+        //let margins = self.layoutMarginsGuide
+
+        movieTitle.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        movieTitle.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        movieTitle.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
+        movieCoverImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        movieCoverImage.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        movieCoverImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        movieCoverImage.leadingAnchor.constraint(equalTo: movieTitle.trailingAnchor, constant: 8.0).isActive = true
+
+        movieTitle.widthAnchor.constraint(equalTo: movieCoverImage.widthAnchor, multiplier: 2.1).isActive = true
+        movieTitle.heightAnchor.constraint(equalTo: movieCoverImage.heightAnchor, multiplier: 1.0).isActive = true
     }
 }
