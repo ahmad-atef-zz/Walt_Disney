@@ -29,10 +29,7 @@ class MovieCell: UIView {
     func configure(movie: Movie) {
         movieTitle.text = movie.title
         if let movieImageURL = URL(string: movie.imageCover){
-            movieCoverImage.download(from: movieImageURL,
-                                     placeholder: moviceCellPlaceholderImage) { (image) in
-                                        
-            }
+            movieCoverImage.download(from: movieImageURL,placeholder: moviceCellPlaceholderImage)
         }
     }
 
