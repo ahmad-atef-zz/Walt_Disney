@@ -8,6 +8,7 @@ target 'Walt Disney' do
   pod 'SwiftyJSON'
   pod 'SwiftLint'
   pod 'Alamofire'
+  pod 'SwifterSwift'            # All Extensions
   pod "PromiseKit"
 
   target 'Walt DisneyTests' do
