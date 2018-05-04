@@ -13,24 +13,44 @@ class MoviesListViewController: UIViewController {
 
     //MARK: - Proprties -
     private let allViews: [UIView] = [UIView(frame: .zero),UIView(frame: .zero),UIView(frame: .zero)]
-    
+    private let movieCell = MovieCell()
+    private let movie = try! Movie("Movie.json".contentOfFile())
 
     //MARK: - View Life Cycle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        setupConstraints()
+//        setupThreeViews()
+//        setupThreeViewsConstraints()
+        setupMovieCellView()
+        setupMovieCellConstraints()
+
     }
 
-    private func setupViews() {
+    private func setupThreeViews() {
         for view in allViews {
             view.backgroundColor = .random
             self.view.addSubview(view)
         }
     }
     
-    private func setupConstraints() {
+    private func setupThreeViewsConstraints() {
         setupThreeEquallySideBySideView()
+    }
+
+    private func setupMovieCellView() {
+        movieCell.backgroundColor = .random
+        view.addSubview(movieCell)
+        movieCell.configure(movie: movie)
+    }
+
+    private func setupMovieCellConstraints() {
+        let margins = self.view.layoutMarginsGuide
+        movieCell.translatesAutoresizingMaskIntoConstraints = false
+
+        movieCell.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        movieCell.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+        movieCell.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+        movieCell.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
     }
     
     private func setupThreeEquallySideBySideView() {
