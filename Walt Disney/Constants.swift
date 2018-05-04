@@ -6,4 +6,7 @@
 //  Copyright © 2018 Ahmad Atef. All rights reserved.
 //
 
+import UIKit
 import Foundation
+
+let moviceCellPlaceholderImage = UIImage(named: "movie")
