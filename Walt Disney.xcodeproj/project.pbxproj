@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E315EC720A1453300076AB7 /* GenericCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E315EC620A1453300076AB7 /* GenericCellConfigurator.swift */; };
 		1E53074A202765CA000AE49C /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530749202765CA000AE49C /* MovieTests.swift */; };
 		1E53074C2027743E000AE49C /* MoviesListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53074B2027743E000AE49C /* MoviesListTests.swift */; };
 		1E6B8B6A2050EFC20077D1B4 /* MovieServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B8B692050EFC20077D1B4 /* MovieServiceTests.swift */; };
@@ -22,8 +23,8 @@
 		1E90774A2048FF6C00510C17 /* Movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E9077492048FF6C00510C17 /* Movie.json */; };
 		1E90774B2048FF6C00510C17 /* Movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E9077492048FF6C00510C17 /* Movie.json */; };
 		1E90774C204900CA00510C17 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90773C2048F46400510C17 /* Rating.swift */; };
-		1EA39BFA2090291A005D8EFB /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA39BF92090291A005D8EFB /* ConfigurableCell.swift */; };
-		1EA39BFB2090291A005D8EFB /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA39BF92090291A005D8EFB /* ConfigurableCell.swift */; };
+		1EA39BFA2090291A005D8EFB /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA39BF92090291A005D8EFB /* GenericCell.swift */; };
+		1EA39BFB2090291A005D8EFB /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA39BF92090291A005D8EFB /* GenericCell.swift */; };
 		3A8E76195041FEC63B7309A8 /* Pods_Walt_Disney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686DDBFCC7BF5978A9D69CE0 /* Pods_Walt_Disney.framework */; };
 		5C452EAB1FAF0FC6005F4240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C452EAA1FAF0FC6005F4240 /* Main.storyboard */; };
 		5C452EAD1FAF108B005F4240 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C452EAC1FAF108B005F4240 /* Launch Screen.storyboard */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		032A78EB3F0D8431777D87C1 /* Pods-Walt Disney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walt Disney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Walt Disney/Pods-Walt Disney.release.xcconfig"; sourceTree = "<group>"; };
+		1E315EC620A1453300076AB7 /* GenericCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCellConfigurator.swift; sourceTree = "<group>"; };
 		1E530749202765CA000AE49C /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		1E53074B2027743E000AE49C /* MoviesListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTests.swift; sourceTree = "<group>"; };
 		1E6B8B692050EFC20077D1B4 /* MovieServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceTests.swift; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 		1E9077462048FADA00510C17 /* GenralExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenralExtentions.swift; sourceTree = "<group>"; };
 		1E9077492048FF6C00510C17 /* Movie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Movie.json; sourceTree = "<group>"; };
 		1EA39BF420901E92005D8EFB /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		1EA39BF92090291A005D8EFB /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		1EA39BF92090291A005D8EFB /* GenericCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCell.swift; sourceTree = "<group>"; };
 		52A0877795E5A1BEFA748E47 /* Pods-Walt Disney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walt Disney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Walt Disney/Pods-Walt Disney.debug.xcconfig"; sourceTree = "<group>"; };
 		5C452EAA1FAF0FC6005F4240 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5C452EAC1FAF108B005F4240 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -110,7 +112,8 @@
 		1EA39BF8209028FD005D8EFB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1EA39BF92090291A005D8EFB /* ConfigurableCell.swift */,
+				1EA39BF92090291A005D8EFB /* GenericCell.swift */,
+				1E315EC620A1453300076AB7 /* GenericCellConfigurator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E315EC720A1453300076AB7 /* GenericCellConfigurator.swift in Sources */,
 				5C452EB71FAF2867005F4240 /* AppDelegate.swift in Sources */,
 				5C452EB41FAF21A3005F4240 /* UIExtentions.swift in Sources */,
 				5C84789F1FAA4829009EEE41 /* MoviesListService.swift in Sources */,
@@ -481,7 +485,7 @@
 				1E90773D2048F46400510C17 /* Rating.swift in Sources */,
 				5C452EB21FAF17D3005F4240 /* MovieCell.swift in Sources */,
 				1E90773B2048F19800510C17 /* Constants.swift in Sources */,
-				1EA39BFA2090291A005D8EFB /* ConfigurableCell.swift in Sources */,
+				1EA39BFA2090291A005D8EFB /* GenericCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +496,7 @@
 				5CBD4C291FBD46960098CD18 /* MovieCellTestCase.swift in Sources */,
 				1E9077482048FADA00510C17 /* GenralExtentions.swift in Sources */,
 				5C8478891FAA15D8009EEE41 /* Walt_DisneyTests.swift in Sources */,
-				1EA39BFB2090291A005D8EFB /* ConfigurableCell.swift in Sources */,
+				1EA39BFB2090291A005D8EFB /* GenericCell.swift in Sources */,
 				1E90773F2048F55400510C17 /* RatingTests.swift in Sources */,
 				1E53074C2027743E000AE49C /* MoviesListTests.swift in Sources */,
 				1E53074A202765CA000AE49C /* MovieTests.swift in Sources */,
