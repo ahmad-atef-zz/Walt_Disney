@@ -40,7 +40,7 @@ class MoviesListViewController: UIViewController {
     private func setupMovieCellView() {
         movieCell.backgroundColor = .random
         view.addSubview(movieCell)
-        movieCell.configure(movie: movie)
+        movieCell.configure(data: movie)
     }
 
     private func setupMovieCellConstraints() {
