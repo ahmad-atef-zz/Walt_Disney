@@ -9,12 +9,15 @@
 import UIKit
 import Foundation
 
-class MovieCell: UIView {
+class MovieCell: UIView,GenericCell{
 
-    private let movieTitle = UILabel()
-    private let movieCoverImage = UIImageView()
+    // Private Properties.
+    fileprivate let movieTitle = UILabel()
+    fileprivate let movieCoverImage = UIImageView()
     //private let rating : UIRating = UIRating()
 
+
+    // Initializers.
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubViews()
@@ -26,9 +29,9 @@ class MovieCell: UIView {
     }
 
 
-    func configure(movie: Movie) {
-        movieTitle.text = movie.title
-        if let movieImageURL = URL(string: movie.imageCover){
+    func configure(data: Movie) {
+        movieTitle.text = data.title
+        if let movieImageURL = URL(string: data.imageCover){
             movieCoverImage.download(from: movieImageURL,placeholder: moviceCellPlaceholderImage)
         }
     }
