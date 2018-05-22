@@ -25,6 +25,10 @@ class MoviesListViewController: UIViewController {
         setupMovieCellConstraints()
 
     }
+    
+    func print() {
+        print("I'm back 🎉🤘🚀")
+    }
 
     private func setupThreeViews() {
         for view in allViews {
