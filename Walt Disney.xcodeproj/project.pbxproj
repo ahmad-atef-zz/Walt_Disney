@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E315EC720A1453300076AB7 /* GenericCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E315EC620A1453300076AB7 /* GenericCellConfigurator.swift */; };
+		1E3B64B620DA018100869317 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3B64B520DA018100869317 /* Advertisement.swift */; };
+		1E3B64BA20DA057B00869317 /* WarningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3B64B920DA057B00869317 /* WarningCell.swift */; };
 		1E53074A202765CA000AE49C /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E530749202765CA000AE49C /* MovieTests.swift */; };
 		1E53074C2027743E000AE49C /* MoviesListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E53074B2027743E000AE49C /* MoviesListTests.swift */; };
 		1E6B8B6A2050EFC20077D1B4 /* MovieServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B8B692050EFC20077D1B4 /* MovieServiceTests.swift */; };
@@ -24,7 +26,6 @@
 		1E90774B2048FF6C00510C17 /* Movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E9077492048FF6C00510C17 /* Movie.json */; };
 		1E90774C204900CA00510C17 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90773C2048F46400510C17 /* Rating.swift */; };
 		1EA39BFA2090291A005D8EFB /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA39BF92090291A005D8EFB /* GenericCell.swift */; };
-		1EA39BFB2090291A005D8EFB /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA39BF92090291A005D8EFB /* GenericCell.swift */; };
 		3A8E76195041FEC63B7309A8 /* Pods_Walt_Disney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686DDBFCC7BF5978A9D69CE0 /* Pods_Walt_Disney.framework */; };
 		5C452EAB1FAF0FC6005F4240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C452EAA1FAF0FC6005F4240 /* Main.storyboard */; };
 		5C452EAD1FAF108B005F4240 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C452EAC1FAF108B005F4240 /* Launch Screen.storyboard */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		032A78EB3F0D8431777D87C1 /* Pods-Walt Disney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walt Disney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Walt Disney/Pods-Walt Disney.release.xcconfig"; sourceTree = "<group>"; };
 		1E315EC620A1453300076AB7 /* GenericCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCellConfigurator.swift; sourceTree = "<group>"; };
+		1E3B64B520DA018100869317 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
+		1E3B64B920DA057B00869317 /* WarningCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarningCell.swift; sourceTree = "<group>"; };
 		1E530749202765CA000AE49C /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		1E53074B2027743E000AE49C /* MoviesListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTests.swift; sourceTree = "<group>"; };
 		1E6B8B692050EFC20077D1B4 /* MovieServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceTests.swift; sourceTree = "<group>"; };
@@ -109,18 +112,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1EA39BF8209028FD005D8EFB /* Protocols */ = {
+		1EA39BF8209028FD005D8EFB /* CellConfigurator */ = {
 			isa = PBXGroup;
 			children = (
-				1EA39BF92090291A005D8EFB /* GenericCell.swift */,
 				1E315EC620A1453300076AB7 /* GenericCellConfigurator.swift */,
 			);
-			path = Protocols;
+			path = CellConfigurator;
 			sourceTree = "<group>";
 		};
 		5C452EB01FAF1710005F4240 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1E3B64B920DA057B00869317 /* WarningCell.swift */,
+				1EA39BF92090291A005D8EFB /* GenericCell.swift */,
 				5C452EB11FAF17D3005F4240 /* MovieCell.swift */,
 			);
 			path = UI;
@@ -165,7 +169,7 @@
 				5C84789A1FAA165A009EEE41 /* Controllers */,
 				5C84789C1FAA165A009EEE41 /* Services */,
 				5C8478A11FAA4A1C009EEE41 /* Extensions */,
-				1EA39BF8209028FD005D8EFB /* Protocols */,
+				1EA39BF8209028FD005D8EFB /* CellConfigurator */,
 				5C8478991FAA165A009EEE41 /* Views */,
 				1E90773A2048F19800510C17 /* Constants.swift */,
 			);
@@ -230,6 +234,7 @@
 			children = (
 				5C8478A31FAA4F63009EEE41 /* Movie.swift */,
 				1E90773C2048F46400510C17 /* Rating.swift */,
+				1E3B64B520DA018100869317 /* Advertisement.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -474,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3B64BA20DA057B00869317 /* WarningCell.swift in Sources */,
 				1E315EC720A1453300076AB7 /* GenericCellConfigurator.swift in Sources */,
 				5C452EB71FAF2867005F4240 /* AppDelegate.swift in Sources */,
 				5C452EB41FAF21A3005F4240 /* UIExtentions.swift in Sources */,
@@ -481,6 +487,7 @@
 				5C84789D1FAA165A009EEE41 /* MoviesListViewController.swift in Sources */,
 				5C452EB91FAF706E005F4240 /* UIColorExtesion.swift in Sources */,
 				1E9077472048FADA00510C17 /* GenralExtentions.swift in Sources */,
+				1E3B64B620DA018100869317 /* Advertisement.swift in Sources */,
 				5C8478A41FAA4F63009EEE41 /* Movie.swift in Sources */,
 				1E90773D2048F46400510C17 /* Rating.swift in Sources */,
 				5C452EB21FAF17D3005F4240 /* MovieCell.swift in Sources */,
@@ -496,7 +503,6 @@
 				5CBD4C291FBD46960098CD18 /* MovieCellTestCase.swift in Sources */,
 				1E9077482048FADA00510C17 /* GenralExtentions.swift in Sources */,
 				5C8478891FAA15D8009EEE41 /* Walt_DisneyTests.swift in Sources */,
-				1EA39BFB2090291A005D8EFB /* GenericCell.swift in Sources */,
 				1E90773F2048F55400510C17 /* RatingTests.swift in Sources */,
 				1E53074C2027743E000AE49C /* MoviesListTests.swift in Sources */,
 				1E53074A202765CA000AE49C /* MovieTests.swift in Sources */,

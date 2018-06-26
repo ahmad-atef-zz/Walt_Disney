@@ -11,7 +11,7 @@ import Foundation
 
 /// Generic protocol for Cell
 protocol GenericCell {
-    associatedtype DataCell
-    func configure(data: DataCell)
+    associatedtype DataType
+    func configure(data: DataType)
 }
 
