@@ -10,32 +10,40 @@ import XCTest
 @testable import Walt_Disney
 
 class MovieServiceTests: XCTestCase {
-    var movieServiceUnderTest : MovieListService?
+    var listingService: MovieListService!
     
     override func setUp() {
         super.setUp()
-        let mockedDataSource = MockMovieDataSource()
-        self.movieServiceUnderTest = MovieListService(dataSource: mockedDataSource)
+        let mockedListingService = MockedMoviesListing()
+        listingService = ConcretMovieListService(movieListing: mockedListingService)
     }
-    
-    func testMovieServiceIsNotEmpty() {
-        if let movies = movieServiceUnderTest?.listMovies(){
-            XCTAssertFalse(movies.count == 0)
+
+    func testMovieListServiceShouldLoadDataForAsync() {
+        let exp = expectation(description: "Listing movie service expectation")
+
+        listingService.list {
+            exp.fulfill()
+            XCTAssertTrue(self.listingService.movieListing.didLoadMoviesSuccessfully())
         }
+
+        waitForExpectations(timeout: 3, handler: nil)
     }
+
 }
 
-private class MockMovieDataSource : MovieDataSource {
-    
-    var mockedMoviesList : Movies?
-    let moviesListJsonFile = "MoviesList.json".contentOfFile()
-    
-    func listMovies(onSuccess: ([Movie]) -> (), onFail: (String) -> ()) {
-        self.mockedMoviesList = try? Movies(moviesListJsonFile)
-        if let loadedMoveis = self.mockedMoviesList?.movies{
-            onSuccess(loadedMoveis)
+
+fileprivate class MockedMoviesListing : MovieListing {
+    var movies: [Movie] = []
+
+    func listMovies (onSuccess: @escaping ([Movie]) -> (), onFail: (String) -> ()){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let movie1 = try! Movie("Movie.json".contentOfFile())
+            let movie2 = try! Movie("Movie.json".contentOfFile())
+            self.movies.append(contentsOf: [movie1,movie2])
+            onSuccess(self.movies)
         }
     }
-    
-    
+    func didLoadMoviesSuccessfully() -> Bool {
+        return movies.count > 0
+    }
 }
