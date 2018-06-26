@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class MovieCell: UIView,GenericCell{
+class MovieCell: UIView{
 
     // Private Properties.
     fileprivate let movieTitle = UILabel()
@@ -26,14 +26,6 @@ class MovieCell: UIView,GenericCell{
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-
-    func configure(data: Movie) {
-        movieTitle.text = data.title
-        if let movieImageURL = URL(string: data.imageCover){
-            movieCoverImage.download(from: movieImageURL,placeholder: moviceCellPlaceholderImage)
-        }
     }
 
     private func setupSubViews() {
@@ -58,5 +50,17 @@ class MovieCell: UIView,GenericCell{
 
         movieTitle.widthAnchor.constraint(equalTo: movieCoverImage.widthAnchor, multiplier: 2.1).isActive = true
         movieTitle.heightAnchor.constraint(equalTo: movieCoverImage.heightAnchor, multiplier: 1.0).isActive = true
+    }
+}
+
+extension MovieCell: GenericCell {
+    func configure(data: Movie) {
+
+        self.movieTitle.text = data.title
+        guard let url = URL(string: data.imageCover), let placeHolderImg =  moviceCellPlaceholderImage else { return }
+
+        self.movieCoverImage.download(from: url, placeholder: placeHolderImg) { (image) in
+            self.movieCoverImage.image = image
+        }
     }
 }
