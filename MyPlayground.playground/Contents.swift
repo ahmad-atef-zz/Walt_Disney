@@ -149,5 +149,104 @@ class TableCellConfgiurator <CellType: GenericCell, CellData> : GenericConfigura
 
  P.S: you can chain conditions as you like
  */
+// 1. Struct adop to Protocl
+struct Developer: Management {
+    func planeToSprint(sprintId: Int) {
+        print("Developer \(self.name) can do planing for sprint: \(sprintId).")
+    }
+
+    let name: String
+    let age: Int
+}
+
+protocol Management {
+    func planeToSprint(sprintId: Int)
+}
+
+let zsolt = Developer(name: "Zsolt", age: 65)
+zsolt.planeToSprint(sprintId: 366)
+
+
+// 2. Struct with Generic which is adop to protocol <P: myProtocol>.
+
+struct Developer2 <T> : Management {
+    func planeToSprint(sprintId: Int) {
+        print("Developer \(self.name) can do planing for sprint: \(sprintId).")
+    }
+
+    let specialCharacteristic: T
+    let name: String
+}
+struct Car {let model: String}
+struct Hoppy {let name: String}
+
+let hana = Developer2(specialCharacteristic: Int(28), name: "Hana")
+let arihant = Developer2(specialCharacteristic: Car(model: "Audi"), name: "Arihant")
+let emin = Developer2(specialCharacteristic: Hoppy(name: "Travel"), name: "Emin")
+
+//print("\(hana.name) specialCharacteristic is \(hana.specialCharacteristic)")
+//print("\(emin.name) specialCharacteristic is \(emin.specialCharacteristic)")
+//print("\(arihant.name) specialCharacteristic is \(arihant.specialCharacteristic)")
+//
+//hana.specialCharacteristic
+//emin.specialCharacteristic.name
+//arihant.specialCharacteristic.model
+
+protocol DeveloperGenericProtocol {
+    associatedtype Talent
+    var skill: Talent { get }
+    func talkAboutYourSkill()
+}
+
+struct Developer3: DeveloperGenericProtocol {
+    func talkAboutYourSkill() {
+        print("I have skill\(skill)")
+    }
+
+    var skill = ""
+}
+
+struct Developer3V2: DeveloperGenericProtocol{
+    func talkAboutYourSkill() {
+        print("I have skill\(skill)")
+    }
+
+    var skill: Hoppy
+}
+
+struct Develoepr3V3: DeveloperGenericProtocol {
+    var skill: Car
+
+    func talkAboutYourSkill() {
+        print("I have skill\(skill)")
+    }
+}
+
+let hana3 = Developer3(skill: "swift")
+let emin3V2 = Developer3V2(skill: Hoppy(name: "Traveling"))
+let zsolt3V3 = Develoepr3V3(skill: Car(model: "mazda"))
+//
+//zsolt3V3.talkAboutYourSkill()
+//hana3.talkAboutYourSkill()
+//emin3V2.talkAboutYourSkill()
+
+
+protocol AdvancedGenericDeveloperTalent {
+    associatedtype Topic
+    var topic: Topic { get }
+}
+
+struct AdvancedDeveloepr <T: AdvancedGenericDeveloperTalent, D> : Management{
+    var talent: T
+    var depth: D
+
+    func planeToSprint(sprintId: Int) {}
+}
+
+struct Diving: AdvancedGenericDeveloperTalent{
+    var topic: Hoppy
+}
+
+let andi = AdvancedDeveloepr(talent: Diving(topic: Hoppy(name: "diving")), depth: 3)
 
 print("😇")
