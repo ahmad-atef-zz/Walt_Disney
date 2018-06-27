@@ -9,30 +9,31 @@
 import Foundation
 
 // Extract functionality and wrap it in a protocol declaration.
-protocol MovieDataSource {
-    func listMovies (onSuccess: ([Movie]) -> (), onFail: (String) -> ())
+protocol MovieListing {
+    var movies: [Movie] { get set }
+    func listMovies (onSuccess: @escaping ([Movie]) -> (), onFail: (String) -> ())
+    func didLoadMoviesSuccessfully() -> Bool
 }
 
-// Concrete MovieDataSource
-class APIMoviesListDataSource : MovieDataSource{
-    private var movies : [Movie] = []
-    func listMovies (onSuccess: ([Movie]) -> (), onFail: (String) -> ()){
-    }
+protocol MovieListService {
+    var movieListing: MovieListing { get }
+    func list(completion: @escaping () -> Void)
 }
 
+class ConcretMovieListService: MovieListService {
 
-class MovieListService {
-    private var dataSource: MovieDataSource?
-    private var resultMovies: [Movie] = []
+    var movieListing: MovieListing
 
-    init(dataSource: MovieDataSource?) {
-        self.dataSource = dataSource
+    init(movieListing: MovieListing) {
+        self.movieListing = movieListing
     }
-    
-    func listMovies() -> [Movie]? {
-        self.dataSource?.listMovies(onSuccess: { movies in
-            self.resultMovies = movies
-        }, onFail: { error in})
-        return resultMovies
+
+    func list(completion: @escaping () -> Void) {
+        self.movieListing.listMovies(onSuccess: { (movies) in
+            self.movieListing.movies = movies
+            completion()
+        }) { (error) in
+            completion()
+        }
     }
 }

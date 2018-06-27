@@ -22,32 +22,15 @@ class MovieTests: XCTestCase {
     }
     
     func testMovieIsNotNil() {
-//        let movie = Movie(name: "",
-//                          imageCover: "",
-//                          genre: .Unknown,
-//                          rating: 0.0,
-//                          story: "",
-//                          releaseDate: "")
-//        XCTAssertNotNil(movie)
     }
     
     func testMovieHasName() {
-//        let movie = Movie(name: "movie_name",
-//                          imageCover: "",
-//                          genre: .Unknown,
-//                          rating: 0.0,
-//                          story: "",
-//                          releaseDate: "")
-//        XCTAssert(!movie.name.isEmpty)
     }
     
     func testMovieHasReleaseDate() {
-//        let movie = Movie(name: "",
-//                          imageCover: "",
-//                          genre: .Unknown,
-//                          rating: 0.0,
-//                          story: "",
-//                          releaseDate: "1517763321")
-//        XCTAssert(!movie.releaseDate.isEmpty)
+    }
+
+    func testMovieDataHasBeenPopulated() {
+        
     }
 }

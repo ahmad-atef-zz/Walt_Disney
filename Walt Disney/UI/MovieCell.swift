@@ -9,11 +9,15 @@
 import UIKit
 import Foundation
 
-class MovieCell: UIView {
+class MovieCell: UIView{
 
-    private let movieNameLabel = UILabel()
-    private let movieImageView = UIImageView()
+    // Private Properties.
+    fileprivate let movieTitle = UILabel()
+    fileprivate let movieCoverImage = UIImageView()
+    //private let rating : UIRating = UIRating()
 
+
+    // Initializers.
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubViews()
@@ -24,24 +28,39 @@ class MovieCell: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-
-    func configure(for movie: Movie) {
-
-    }
-
     private func setupSubViews() {
-        movieNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        movieNameLabel.text = "TESTING DATA"
-        movieNameLabel.textColor = .yellow
-        movieNameLabel.backgroundColor = .green
-        movieNameLabel.textAlignment = .center
-        addSubview(movieNameLabel)
+        addSubview(movieTitle)
+        addSubview(movieCoverImage)
     }
 
     private func addConstraints(){
-        movieNameLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        movieNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        movieNameLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.6).isActive = true
-        movieNameLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.75).isActive = true
+        movieTitle.translatesAutoresizingMaskIntoConstraints = false
+        movieCoverImage.translatesAutoresizingMaskIntoConstraints = false
+
+        //let margins = self.layoutMarginsGuide
+
+        movieTitle.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        movieTitle.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        movieTitle.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+
+        movieCoverImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        movieCoverImage.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        movieCoverImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        movieCoverImage.leadingAnchor.constraint(equalTo: movieTitle.trailingAnchor, constant: 8.0).isActive = true
+
+        movieTitle.widthAnchor.constraint(equalTo: movieCoverImage.widthAnchor, multiplier: 2.1).isActive = true
+        movieTitle.heightAnchor.constraint(equalTo: movieCoverImage.heightAnchor, multiplier: 1.0).isActive = true
+    }
+}
+
+extension MovieCell: GenericCell {
+    func configure(data: Movie) {
+
+        self.movieTitle.text = data.title
+        guard let url = URL(string: data.imageCover), let placeHolderImg =  moviceCellPlaceholderImage else { return }
+
+        self.movieCoverImage.download(from: url, placeholder: placeHolderImg) { (image) in
+            self.movieCoverImage.image = image
+        }
     }
 }

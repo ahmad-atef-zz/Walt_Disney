@@ -7,6 +7,9 @@ target 'Walt Disney' do
   # Pods for Walt Disney
   pod 'SwiftyJSON'
   pod 'SwiftLint'
+  pod 'Alamofire'
+  pod 'SwifterSwift', '~> 3.2.0'
+  pod "PromiseKit"
 
   target 'Walt DisneyTests' do
     inherit! :search_paths
