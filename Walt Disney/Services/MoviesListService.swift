@@ -29,11 +29,12 @@ class ConcretMovieListService: MovieListService {
     }
 
     func list(completion: @escaping () -> Void) {
+
         self.movieListing.listMovies(onSuccess: { (movies) in
             self.movieListing.movies = movies
             completion()
-        }) { (_) in
+        }, onFail: { (_) in
             completion()
-        }
+        })
     }
 }
