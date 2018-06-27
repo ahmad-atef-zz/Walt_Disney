@@ -8,10 +8,8 @@
 
 import Foundation
 
-
 /// Generic protocol for Cell
 protocol GenericCell {
     associatedtype DataType
     func configure(data: DataType)
 }
-

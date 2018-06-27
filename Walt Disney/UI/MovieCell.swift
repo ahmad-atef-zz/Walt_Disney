@@ -9,13 +9,12 @@
 import UIKit
 import Foundation
 
-class MovieCell: UIView{
+class MovieCell: UIView {
 
     // Private Properties.
     fileprivate let movieTitle = UILabel()
     fileprivate let movieCoverImage = UIImageView()
     //private let rating : UIRating = UIRating()
-
 
     // Initializers.
     override init(frame: CGRect) {
@@ -33,7 +32,7 @@ class MovieCell: UIView{
         addSubview(movieCoverImage)
     }
 
-    private func addConstraints(){
+    private func addConstraints() {
         movieTitle.translatesAutoresizingMaskIntoConstraints = false
         movieCoverImage.translatesAutoresizingMaskIntoConstraints = false
 

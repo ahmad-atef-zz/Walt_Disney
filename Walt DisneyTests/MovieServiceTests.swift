@@ -11,7 +11,7 @@ import XCTest
 
 class MovieServiceTests: XCTestCase {
     var listingService: MovieListService!
-    
+
     override func setUp() {
         super.setUp()
         let mockedListingService = MockedMoviesListing()
@@ -31,15 +31,16 @@ class MovieServiceTests: XCTestCase {
 
 }
 
-
-fileprivate class MockedMoviesListing : MovieListing {
+private class MockedMoviesListing: MovieListing {
     var movies: [Movie] = []
 
-    func listMovies (onSuccess: @escaping ([Movie]) -> (), onFail: (String) -> ()){
+    func listMovies (onSuccess: @escaping ([Movie]) -> Void, onFail: (String) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let movie1 = try! Movie("Movie.json".contentOfFile())
-            let movie2 = try! Movie("Movie.json".contentOfFile())
-            self.movies.append(contentsOf: [movie1,movie2])
+            let movie1 = try? Movie("Movie.json".contentOfFile())
+            let movie2 = try? Movie("Movie.json".contentOfFile())
+            if let movie1 = movie1, let movie2 = movie2 {
+                self.movies.append(contentsOf: [movie1, movie2])
+            }
             onSuccess(self.movies)
         }
     }

@@ -9,9 +9,8 @@
 import UIKit
 import Foundation
 
-
-extension UIImageView{
-    convenience init? (imageName : String, contentMode : UIViewContentMode = .scaleToFill){
+extension UIImageView {
+    convenience init? (imageName: String, contentMode: UIViewContentMode = .scaleToFill) {
         guard let image = UIImage(named: imageName) else {
             return nil
         }

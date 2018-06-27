@@ -14,13 +14,11 @@ protocol GenericCellConfigurator {
     func confgiure(cell: UIView)
 }
 
-
 class TableViewCellConfigurator: GenericCellConfigurator {
     var identefier: String = ""
 
     func confgiure(cell: UIView) {
-        
-    }
 
+    }
 
 }

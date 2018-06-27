@@ -12,7 +12,7 @@ import FBSnapshotTestCase
 
 class MovieCellTestCase: FBSnapshotTestCase {
 
-    let movieView : MovieCell = {
+    let movieView: MovieCell = {
         let view = MovieCell()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .red

@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Advertisement {
     let url: URL
 }

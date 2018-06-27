@@ -10,7 +10,7 @@ import XCTest
 @testable import Walt_Disney
 
 class MoviesListTests: XCTestCase {
-    
+
 //    func testListIsNotNil() {
 //        let movieList: MovieListDataSource = MoviesList()
 //        let listService = MovieListService(dataSource: movieList)
@@ -25,5 +25,4 @@ class MoviesListTests: XCTestCase {
 //        XCTAssert(list?.count == 3)
 //    }
 
-    
 }

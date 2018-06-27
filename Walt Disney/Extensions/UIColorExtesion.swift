@@ -9,21 +9,17 @@
 import UIKit
 import Foundation
 
-
-
-extension UIColor{
-    static var movieTitleBigColor : UIColor{
-        get{
+extension UIColor {
+    static var movieTitleBigColor: UIColor {
+        get {
             return .black
         }
     }
 }
 
-
-
-extension UIFont{
-    static var primaryFont : UIFont{
-        get{
+extension UIFont {
+    static var primaryFont: UIFont {
+        get {
             return UIFont.boldSystemFont(ofSize: 20.0)
         }
     }
