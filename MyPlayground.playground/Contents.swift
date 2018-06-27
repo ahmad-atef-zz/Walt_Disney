@@ -28,41 +28,39 @@ let personStruct = MyStack<Person>(koko: Person(name: "", sex: ""))
  You can assign as generics as you want
 
  */
-struct TwoGenericsType <T,S> {
+struct TwoGenericsType <T, S> {
     var popo: T
     var nono: S
 }
-let stringTwoGenericsType = TwoGenericsType<String,String>(popo: "I'm popo String", nono: "I'm nono String")
-let intTwoGenericsType = TwoGenericsType<Int,Int>(popo: 5, nono: 15)
-let personTwoGenericsType = TwoGenericsType<Person,Person>(popo: Person(name: "", sex: ""), nono: Person(name: "", sex: ""))
-let mixedStingAndPersonTwoGenericsType = TwoGenericsType<Person,String>(popo: Person(name: "I'm popo Person", sex: ""), nono: "I'm nono string")
+let stringTwoGenericsType = TwoGenericsType<String, String>(popo: "I'm popo String", nono: "I'm nono String")
+let intTwoGenericsType = TwoGenericsType<Int, Int>(popo: 5, nono: 15)
+let personTwoGenericsType = TwoGenericsType<Person, Person>(popo: Person(name: "", sex: ""), nono: Person(name: "", sex: ""))
+let mixedStingAndPersonTwoGenericsType = TwoGenericsType<Person, String>(popo: Person(name: "I'm popo Person", sex: ""), nono: "I'm nono string")
 /*:
 
  # <P,T> 👉 PLACEHOLDERS
  */
-struct ThreeTypeGenerics <A,B,C> {
-    var first : A
-    var second : B
-    var last : C
+struct ThreeTypeGenerics <A, B, C> {
+    var first: A
+    var second: B
+    var last: C
 }
-let stringIntPerson = ThreeTypeGenerics<String,Int,Person>(first: "", second: 123, last: Person(name: "", sex: ""))
-
-
+let stringIntPerson = ThreeTypeGenerics<String, Int, Person>(first: "", second: 123, last: Person(name: "", sex: ""))
 
 /*:
 
  # 🤷‍♂️ Normal Protocol
  */
 protocol myProtocl {
-    var lolo : String { get set }
+    var lolo: String { get set }
 }
 
 struct myStruct: myProtocl {
     var lolo: String {
-        get{
+        get {
             return self.lolo
         }
-        set{
+        set {
             self.lolo = newValue
         }
     }
@@ -80,7 +78,7 @@ protocol DeviceInfo {
 
 struct ConcretDeviceInfo <T> : DeviceInfo {
     var dataModel: String
-    var koko : T
+    var koko: T
 }
 
 struct ConcretGenericDeviceInfo <T: DeviceInfo> {
@@ -111,7 +109,6 @@ protocol GenericProtocol {
     func config(data: GenericDataType)
 }
 
-
 struct myGenericStruct: GenericProtocol {
     var momo: String = ""
     func config(data: Person) {
@@ -119,12 +116,9 @@ struct myGenericStruct: GenericProtocol {
     }
 }
 
-
-
-
 protocol GenericCell {
     associatedtype CellData
-    func configure(data:CellData)
+    func configure(data: CellData)
 }
 
 protocol GenericConfigurator {
@@ -166,7 +160,6 @@ protocol Management {
 let zsolt = Developer(name: "Zsolt", age: 65)
 zsolt.planeToSprint(sprintId: 366)
 
-
 // 2. Struct with Generic which is adop to protocol <P: myProtocol>.
 
 struct Developer2 <T> : Management {
@@ -206,7 +199,7 @@ struct Developer3: DeveloperGenericProtocol {
     var skill = ""
 }
 
-struct Developer3V2: DeveloperGenericProtocol{
+struct Developer3V2: DeveloperGenericProtocol {
     func talkAboutYourSkill() {
         print("I have skill\(skill)")
     }
@@ -230,20 +223,19 @@ let zsolt3V3 = Develoepr3V3(skill: Car(model: "mazda"))
 //hana3.talkAboutYourSkill()
 //emin3V2.talkAboutYourSkill()
 
-
 protocol AdvancedGenericDeveloperTalent {
     associatedtype Topic
     var topic: Topic { get }
 }
 
-struct AdvancedDeveloepr <T: AdvancedGenericDeveloperTalent, D> : Management{
+struct AdvancedDeveloepr <T: AdvancedGenericDeveloperTalent, D> : Management {
     var talent: T
     var depth: D
 
     func planeToSprint(sprintId: Int) {}
 }
 
-struct Diving: AdvancedGenericDeveloperTalent{
+struct Diving: AdvancedGenericDeveloperTalent {
     var topic: Hoppy
 }
 

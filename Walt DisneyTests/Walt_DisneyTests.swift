@@ -10,20 +10,20 @@ import XCTest
 import FBSnapshotTestCase
 @testable import Walt_Disney
 
-class Walt_DisneyTests: FBSnapshotTestCase {
-    
+class WaltDisneyTests: FBSnapshotTestCase {
+
     override func setUp() {
         super.setUp()
         self.recordMode = true
     }
-    
+
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testMovieCellViewHasAllItems() {
-        
+
     }
 
     func testMovieCellFirstTest() {

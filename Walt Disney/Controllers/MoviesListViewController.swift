@@ -11,29 +11,30 @@ import SwifterSwift
 
 class MoviesListViewController: UIViewController {
 
-    //MARK: - Proprties -
+    // MARK: - Proprties -
     private let movieCell = MovieCell()
-    private let movie = try! Movie("Movie.json".contentOfFile())
+    private let movie = try? Movie("Movie.json".contentOfFile())
 
     private let warningCell = WarningCell()
     let advertisement = Advertisement(url: URL(string: "www.apple.com")!)
 
-    //MARK: - View Life Cycle -
+    // MARK: - View Life Cycle -
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupMovieCellView()
         setupAdvertisemtnsCell()
         setupMovieCellConstraints()
         setupAdsCellConstraints()
-
 
     }
 
     private func setupMovieCellView() {
         movieCell.backgroundColor = .random
         view.addSubview(movieCell)
-        movieCell.configure(data: movie)
+        if let movie = self.movie {
+            movieCell.configure(data: movie)
+        }
     }
     private func setupAdvertisemtnsCell() {
         warningCell.backgroundColor = .random
@@ -61,5 +62,3 @@ class MoviesListViewController: UIViewController {
         movieCell.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
     }
 }
-
-

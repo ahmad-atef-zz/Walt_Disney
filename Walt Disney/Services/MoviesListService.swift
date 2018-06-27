@@ -11,7 +11,7 @@ import Foundation
 // Extract functionality and wrap it in a protocol declaration.
 protocol MovieListing {
     var movies: [Movie] { get set }
-    func listMovies (onSuccess: @escaping ([Movie]) -> (), onFail: (String) -> ())
+    func listMovies (onSuccess: @escaping ([Movie]) -> Void, onFail: (String) -> Void)
     func didLoadMoviesSuccessfully() -> Bool
 }
 
@@ -29,11 +29,12 @@ class ConcretMovieListService: MovieListService {
     }
 
     func list(completion: @escaping () -> Void) {
+
         self.movieListing.listMovies(onSuccess: { (movies) in
             self.movieListing.movies = movies
             completion()
-        }) { (error) in
+        }, onFail: { (_) in
             completion()
-        }
+        })
     }
 }

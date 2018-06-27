@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class WarningCell: UITableViewCell {
     let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 70, height: 40))
 }

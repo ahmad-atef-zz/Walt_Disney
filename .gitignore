@@ -26,6 +26,9 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
+# Swiftlint-generated files
+swiftlint-results.xml
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa

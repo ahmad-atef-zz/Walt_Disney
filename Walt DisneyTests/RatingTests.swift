@@ -10,15 +10,15 @@ import XCTest
 @testable import Walt_Disney
 
 class RatingTests: XCTestCase {
-    
+
     var ratingUnderTest: Rating!
-    
+
     override func setUp() {
         super.setUp()
         let ratingJson = "Rating.json".contentOfFile()
-        self.ratingUnderTest = try! Rating(ratingJson)
+        self.ratingUnderTest = try? Rating(ratingJson)
     }
-    
+
     func testRatingAvergageShouldNotBeGraterThanRatingMax() {
         let ratingAverage = self.ratingUnderTest.average
         let ratingMax = Double(self.ratingUnderTest.max)
