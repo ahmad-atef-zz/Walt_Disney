@@ -26,6 +26,7 @@
 		1E90774B2048FF6C00510C17 /* Movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E9077492048FF6C00510C17 /* Movie.json */; };
 		1E90774C204900CA00510C17 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90773C2048F46400510C17 /* Rating.swift */; };
 		1E9BE10120EB1FB4006A2E0D /* TableViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BE10020EB1FB4006A2E0D /* TableViewCellConfigurator.swift */; };
+		1E9BE10620EB2323006A2E0D /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BE10520EB2323006A2E0D /* ListViewModel.swift */; };
 		1EA39BFA2090291A005D8EFB /* GenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA39BF92090291A005D8EFB /* GenericCell.swift */; };
 		3A8E76195041FEC63B7309A8 /* Pods_Walt_Disney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686DDBFCC7BF5978A9D69CE0 /* Pods_Walt_Disney.framework */; };
 		5C452EAB1FAF0FC6005F4240 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C452EAA1FAF0FC6005F4240 /* Main.storyboard */; };
@@ -498,6 +499,7 @@
 				1E9BE10120EB1FB4006A2E0D /* TableViewCellConfigurator.swift in Sources */,
 				5C452EB41FAF21A3005F4240 /* UIExtentions.swift in Sources */,
 				5C84789F1FAA4829009EEE41 /* MoviesListService.swift in Sources */,
+				1E9BE10620EB2323006A2E0D /* ListViewModel.swift in Sources */,
 				5C84789D1FAA165A009EEE41 /* MoviesListViewController.swift in Sources */,
 				5C452EB91FAF706E005F4240 /* UIColorExtesion.swift in Sources */,
 				1E9077472048FADA00510C17 /* GenralExtentions.swift in Sources */,
