@@ -19,21 +19,3 @@ protocol MovieListService {
     var movieListing: MovieListing { get }
     func list(completion: @escaping () -> Void)
 }
-
-class ConcretMovieListService: MovieListService {
-
-    var movieListing: MovieListing
-
-    init(movieListing: MovieListing) {
-        self.movieListing = movieListing
-    }
-
-    func list(completion: @escaping () -> Void) {
-        self.movieListing.listMovies(onSuccess: { (movies) in
-            self.movieListing.movies = movies
-            completion()
-        }) { (error) in
-            completion()
-        }
-    }
-}
