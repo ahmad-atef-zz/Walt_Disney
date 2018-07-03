@@ -10,17 +10,6 @@ import Foundation
 import UIKit
 
 protocol GenericCellConfigurator {
-    var identefier: String { get }
+    var cellIdentefier: String { get }
     func confgiure(cell: UIView)
-}
-
-
-class TableViewCellConfigurator: GenericCellConfigurator {
-    var identefier: String = ""
-
-    func confgiure(cell: UIView) {
-        
-    }
-
-
 }
