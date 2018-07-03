@@ -8,8 +8,9 @@
 
 import UIKit
 
+//TODO: Upadte CellType: UIView to be CellType: UITableViewCell
 
-class TableViewCellConfigurator <CellType: GenericCell, DataType>: GenericCellConfigurator where CellType.DataType == DataType, CellType: UITableViewCell {
+class TableViewCellConfigurator <CellType: GenericCell, DataType>: GenericCellConfigurator where CellType.DataType == DataType, CellType: UIView {
 
     var cellIdentefier: String = ""
     let item: DataType
