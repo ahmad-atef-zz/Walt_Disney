@@ -15,7 +15,7 @@ class MovieServiceTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let mockedListingService = MockedMoviesListing()
-        listingService = ConcretMovieListService(movieListing: mockedListingService)
+        listingService = MockedMovieListService(movieListing: mockedListingService)
     }
 
     func testMovieListServiceShouldLoadDataForAsync() {
@@ -31,6 +31,22 @@ class MovieServiceTests: XCTestCase {
 
 }
 
+class MockedMovieListService: MovieListService {
+
+    var movieListing: MovieListing
+    init(movieListing: MovieListing) {
+        self.movieListing = movieListing
+    }
+
+    func list(completion: @escaping () -> Void) {
+        self.movieListing.listMovies(onSuccess: { (movies) in
+            self.movieListing.movies = movies
+            completion()
+        }) { (error) in
+            completion()
+        }
+    }
+}
 
 fileprivate class MockedMoviesListing : MovieListing {
     var movies: [Movie] = []
