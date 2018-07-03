@@ -126,8 +126,8 @@
 		5C452EB01FAF1710005F4240 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				1E3B64B920DA057B00869317 /* WarningCell.swift */,
 				1EA39BF92090291A005D8EFB /* GenericCell.swift */,
+				1E3B64B920DA057B00869317 /* WarningCell.swift */,
 				5C452EB11FAF17D3005F4240 /* MovieCell.swift */,
 			);
 			path = UI;
