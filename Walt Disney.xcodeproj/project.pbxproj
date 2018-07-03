@@ -69,6 +69,7 @@
 		1E9077462048FADA00510C17 /* GenralExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenralExtentions.swift; sourceTree = "<group>"; };
 		1E9077492048FF6C00510C17 /* Movie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Movie.json; sourceTree = "<group>"; };
 		1E9BE10020EB1FB4006A2E0D /* TableViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellConfigurator.swift; sourceTree = "<group>"; };
+		1E9BE10520EB2323006A2E0D /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		1EA39BF420901E92005D8EFB /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1EA39BF92090291A005D8EFB /* GenericCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCell.swift; sourceTree = "<group>"; };
 		52A0877795E5A1BEFA748E47 /* Pods-Walt Disney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Walt Disney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Walt Disney/Pods-Walt Disney.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E9BE10420EB2316006A2E0D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1E9BE10520EB2323006A2E0D /* ListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		1EA39BF8209028FD005D8EFB /* CellConfigurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +176,7 @@
 			children = (
 				5C452EB51FAF2867005F4240 /* App Delegate */,
 				5C84787F1FAA15D8009EEE41 /* Info.plist */,
+				1E9BE10420EB2316006A2E0D /* List */,
 				5C452EB01FAF1710005F4240 /* UI */,
 				5C8478A21FAA4A1C009EEE41 /* Models */,
 				5C84789A1FAA165A009EEE41 /* Controllers */,
