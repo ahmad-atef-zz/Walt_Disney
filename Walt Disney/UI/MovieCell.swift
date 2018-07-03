@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class MovieCell: UIView{
+class MovieCell: UIView {
 
     // Private Properties.
     fileprivate let movieTitle = UILabel()

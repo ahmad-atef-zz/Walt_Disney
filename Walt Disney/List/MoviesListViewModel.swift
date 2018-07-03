@@ -6,9 +6,22 @@
 //  Copyright © 2018 Ahmad Atef. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
-class ListViewModel {
-    
+class MoviesListViewModel {
+
+    let movieCellConfigurator = TableViewCellConfigurator<MovieCell,Movie>(item: try! Movie("Movie.json".contentOfFile()))
+    let warningCellConfigurator = TableViewCellConfigurator<WarningCell, String>(item: "Gameeelaaa")
+    let dummyCellConfigurator = TableViewCellConfigurator<DummyCell, DummyModel>(item: DummyModel(name: "Fuck"))
+}
+
+
+class DummyCell: UIView, GenericCell {
+    func configure(data: DummyModel) {
+    }
+}
+
+struct DummyModel {
+    let name: String
 }
